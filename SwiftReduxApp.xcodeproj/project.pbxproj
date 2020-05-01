@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5488791B4F32A217DBAE7A60 /* Pods_SwiftReduxApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B9422F6800918D507BF0AA /* Pods_SwiftReduxApp.framework */; };
+		843A0670245AA7E0008E7160 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A066F245AA7E0008E7160 /* AppState.swift */; };
+		843A0673245AA89E008E7160 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0672245AA89E008E7160 /* AppReducer.swift */; };
+		843A0678245AA96E008E7160 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0677245AA96E008E7160 /* LoginController.swift */; };
+		843A067A245AA977008E7160 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0679245AA977008E7160 /* LoginViewModel.swift */; };
+		843A067D245AA9A9008E7160 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A067C245AA9A9008E7160 /* ViewModel.swift */; };
+		843A067F245AAA51008E7160 /* UIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A067E245AAA51008E7160 /* UIController.swift */; };
+		843A0681245AACF8008E7160 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0680245AACF8008E7160 /* AppStore.swift */; };
+		843E2DDA245C03DE00290312 /* Client+Plugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DD9245C03DE00290312 /* Client+Plugins.swift */; };
+		843E2DDD245C072400290312 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DDC245C072400290312 /* Logger.swift */; };
+		843E2DE0245C477200290312 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DDF245C477200290312 /* AuthResponse.swift */; };
+		843E2DE2245C48DF00290312 /* MoyaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DE1245C48DF00290312 /* MoyaError.swift */; };
+		846E68F5245AFE9B008D97FB /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E68F4245AFE9B008D97FB /* AuthState.swift */; };
+		846E68F7245AFEE8008D97FB /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E68F6245AFEE8008D97FB /* AuthAction.swift */; };
+		846E68F9245AFF66008D97FB /* AuthPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E68F8245AFF66008D97FB /* AuthPayload.swift */; };
+		846E68FB245B02DE008D97FB /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E68FA245B02DE008D97FB /* AuthReducer.swift */; };
+		846E68FD245B0481008D97FB /* AuthThunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E68FC245B0481008D97FB /* AuthThunk.swift */; };
+		846E6902245B0A41008D97FB /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6901245B0A41008D97FB /* AuthAPI.swift */; };
+		846E6904245B0DF7008D97FB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E6903245B0DF7008D97FB /* AuthService.swift */; };
+		847805ED245AA63E00644574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847805EC245AA63E00644574 /* AppDelegate.swift */; };
+		847805F1245AA63E00644574 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847805F0245AA63E00644574 /* MainViewController.swift */; };
+		847805F6245AA63F00644574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847805F5245AA63F00644574 /* Assets.xcassets */; };
+		847805F9245AA63F00644574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847805F7245AA63F00644574 /* LaunchScreen.storyboard */; };
+		84FC9DDE245C871A00EF61B4 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC9DDD245C871A00EF61B4 /* DependencyInjection.swift */; };
+		84FC9DE0245C8A8200EF61B4 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC9DDF245C8A8200EF61B4 /* UserDefaults.swift */; };
+		84FC9DE2245C92C600EF61B4 /* DependencyInjection+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC9DE1245C92C600EF61B4 /* DependencyInjection+Utils.swift */; };
+		84FC9DE4245C93D700EF61B4 /* Service+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC9DE3245C93D700EF61B4 /* Service+Protocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		477FE3F5D0F807B678996739 /* Pods-SwiftReduxApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReduxApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftReduxApp/Pods-SwiftReduxApp.release.xcconfig"; sourceTree = "<group>"; };
+		843A066F245AA7E0008E7160 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		843A0672245AA89E008E7160 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		843A0677245AA96E008E7160 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		843A0679245AA977008E7160 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		843A067C245AA9A9008E7160 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		843A067E245AAA51008E7160 /* UIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIController.swift; sourceTree = "<group>"; };
+		843A0680245AACF8008E7160 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		843E2DD9245C03DE00290312 /* Client+Plugins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client+Plugins.swift"; sourceTree = "<group>"; };
+		843E2DDC245C072400290312 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		843E2DDF245C477200290312 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		843E2DE1245C48DF00290312 /* MoyaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaError.swift; sourceTree = "<group>"; };
+		846E68F4245AFE9B008D97FB /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		846E68F6245AFEE8008D97FB /* AuthAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
+		846E68F8245AFF66008D97FB /* AuthPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPayload.swift; sourceTree = "<group>"; };
+		846E68FA245B02DE008D97FB /* AuthReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
+		846E68FC245B0481008D97FB /* AuthThunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthThunk.swift; sourceTree = "<group>"; };
+		846E6901245B0A41008D97FB /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		846E6903245B0DF7008D97FB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		847805E9245AA63E00644574 /* SwiftReduxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftReduxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847805EC245AA63E00644574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		847805F0245AA63E00644574 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		847805F5245AA63F00644574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847805F8245AA63F00644574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		847805FA245AA63F00644574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FC9DDD245C871A00EF61B4 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		84FC9DDF245C8A8200EF61B4 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		84FC9DE1245C92C600EF61B4 /* DependencyInjection+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyInjection+Utils.swift"; sourceTree = "<group>"; };
+		84FC9DE3245C93D700EF61B4 /* Service+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+Protocol.swift"; sourceTree = "<group>"; };
+		DE8053A65272791AB728BF61 /* Pods-KMart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMart.release.xcconfig"; path = "Target Support Files/Pods-KMart/Pods-KMart.release.xcconfig"; sourceTree = "<group>"; };
+		E87E6F7581AA63CECC6CFF87 /* Pods-SwiftReduxApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReduxApp.debug.xcconfig"; path = "Target Support Files/Pods-SwiftReduxApp/Pods-SwiftReduxApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F3B9422F6800918D507BF0AA /* Pods_SwiftReduxApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReduxApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C8D7391F2C66FFF4F3FAF8 /* Pods-KMart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMart.debug.xcconfig"; path = "Target Support Files/Pods-KMart/Pods-KMart.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		847805E6245AA63E00644574 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5488791B4F32A217DBAE7A60 /* Pods_SwiftReduxApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FCF045F2FEB122149401938 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3B9422F6800918D507BF0AA /* Pods_SwiftReduxApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83E43F2DFC0A3EC49F8BDD56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5C8D7391F2C66FFF4F3FAF8 /* Pods-KMart.debug.xcconfig */,
+				DE8053A65272791AB728BF61 /* Pods-KMart.release.xcconfig */,
+				E87E6F7581AA63CECC6CFF87 /* Pods-SwiftReduxApp.debug.xcconfig */,
+				477FE3F5D0F807B678996739 /* Pods-SwiftReduxApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		843A0669245AA774008E7160 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				843A066A245AA77A008E7160 /* Lauch */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		843A066A245AA77A008E7160 /* Lauch */ = {
+			isa = PBXGroup;
+			children = (
+				847805F5245AA63F00644574 /* Assets.xcassets */,
+				847805EC245AA63E00644574 /* AppDelegate.swift */,
+				847805F7245AA63F00644574 /* LaunchScreen.storyboard */,
+				847805FA245AA63F00644574 /* Info.plist */,
+			);
+			path = Lauch;
+			sourceTree = "<group>";
+		};
+		843A066B245AA7A2008E7160 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				843E2DD8245C02EA00290312 /* Middlewares */,
+				843A0674245AA930008E7160 /* Modules */,
+				843A066D245AA7B3008E7160 /* Entity */,
+				843A066F245AA7E0008E7160 /* AppState.swift */,
+				843A0672245AA89E008E7160 /* AppReducer.swift */,
+				843A0680245AACF8008E7160 /* AppStore.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		843A066C245AA7A9008E7160 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				843A0675245AA94F008E7160 /* Auth */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		843A066D245AA7B3008E7160 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		843A0674245AA930008E7160 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				846E68F3245AFE81008D97FB /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		843A0675245AA94F008E7160 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				843A0676245AA957008E7160 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		843A0676245AA957008E7160 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				843A0677245AA96E008E7160 /* LoginController.swift */,
+				843A0679245AA977008E7160 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		843A067B245AA97D008E7160 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				843A067C245AA9A9008E7160 /* ViewModel.swift */,
+				843A067E245AAA51008E7160 /* UIController.swift */,
+				84FC9DDD245C871A00EF61B4 /* DependencyInjection.swift */,
+				84FC9DDF245C8A8200EF61B4 /* UserDefaults.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		843E2DD8245C02EA00290312 /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Middlewares;
+			sourceTree = "<group>";
+		};
+		843E2DDB245C060C00290312 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				84FC9DE1245C92C600EF61B4 /* DependencyInjection+Utils.swift */,
+				843E2DDC245C072400290312 /* Logger.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		843E2DDE245C475900290312 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				843E2DDF245C477200290312 /* AuthResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		846E68F3245AFE81008D97FB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				846E68F4245AFE9B008D97FB /* AuthState.swift */,
+				846E68F6245AFEE8008D97FB /* AuthAction.swift */,
+				846E68F8245AFF66008D97FB /* AuthPayload.swift */,
+				846E68FA245B02DE008D97FB /* AuthReducer.swift */,
+				846E68FC245B0481008D97FB /* AuthThunk.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		846E68FE245B09B1008D97FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				846E6900245B0A1F008D97FB /* Auth */,
+				846E68FF245B09B8008D97FB /* Plugins */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		846E68FF245B09B8008D97FB /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				843E2DD9245C03DE00290312 /* Client+Plugins.swift */,
+				843E2DE1245C48DF00290312 /* MoyaError.swift */,
+				84FC9DE3245C93D700EF61B4 /* Service+Protocol.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		846E6900245B0A1F008D97FB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				843E2DDE245C475900290312 /* Response */,
+				846E6901245B0A41008D97FB /* AuthAPI.swift */,
+				846E6903245B0DF7008D97FB /* AuthService.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		847805E0245AA63E00644574 = {
+			isa = PBXGroup;
+			children = (
+				847805EB245AA63E00644574 /* SwiftReduxApp */,
+				847805EA245AA63E00644574 /* Products */,
+				83E43F2DFC0A3EC49F8BDD56 /* Pods */,
+				0FCF045F2FEB122149401938 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		847805EA245AA63E00644574 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				847805E9245AA63E00644574 /* SwiftReduxApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		847805EB245AA63E00644574 /* SwiftReduxApp */ = {
+			isa = PBXGroup;
+			children = (
+				843E2DDB245C060C00290312 /* Utilities */,
+				846E68FE245B09B1008D97FB /* Services */,
+				843A067B245AA97D008E7160 /* Common */,
+				843A0669245AA774008E7160 /* App */,
+				843A066C245AA7A9008E7160 /* UI */,
+				843A066B245AA7A2008E7160 /* Core */,
+				847805F0245AA63E00644574 /* MainViewController.swift */,
+			);
+			path = SwiftReduxApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		847805E8245AA63E00644574 /* SwiftReduxApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847805FD245AA63F00644574 /* Build configuration list for PBXNativeTarget "SwiftReduxApp" */;
+			buildPhases = (
+				7EA45FF435610E6D11144F21 /* [CP] Check Pods Manifest.lock */,
+				847805E5245AA63E00644574 /* Sources */,
+				847805E6245AA63E00644574 /* Frameworks */,
+				847805E7245AA63E00644574 /* Resources */,
+				BED5B91B8DDBB8945370A1FC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftReduxApp;
+			productName = KMart;
+			productReference = 847805E9245AA63E00644574 /* SwiftReduxApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		847805E1245AA63E00644574 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = KMart;
+				TargetAttributes = {
+					847805E8245AA63E00644574 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 847805E4245AA63E00644574 /* Build configuration list for PBXProject "SwiftReduxApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 847805E0245AA63E00644574;
+			productRefGroup = 847805EA245AA63E00644574 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				847805E8245AA63E00644574 /* SwiftReduxApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		847805E7245AA63E00644574 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847805F9245AA63F00644574 /* LaunchScreen.storyboard in Resources */,
+				847805F6245AA63F00644574 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EA45FF435610E6D11144F21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftReduxApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BED5B91B8DDBB8945370A1FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftReduxApp/Pods-SwiftReduxApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftReduxApp/Pods-SwiftReduxApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftReduxApp/Pods-SwiftReduxApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		847805E5245AA63E00644574 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FC9DE2245C92C600EF61B4 /* DependencyInjection+Utils.swift in Sources */,
+				846E68F9245AFF66008D97FB /* AuthPayload.swift in Sources */,
+				846E6902245B0A41008D97FB /* AuthAPI.swift in Sources */,
+				843A0670245AA7E0008E7160 /* AppState.swift in Sources */,
+				847805F1245AA63E00644574 /* MainViewController.swift in Sources */,
+				843A067A245AA977008E7160 /* LoginViewModel.swift in Sources */,
+				84FC9DDE245C871A00EF61B4 /* DependencyInjection.swift in Sources */,
+				846E68F7245AFEE8008D97FB /* AuthAction.swift in Sources */,
+				843A0673245AA89E008E7160 /* AppReducer.swift in Sources */,
+				847805ED245AA63E00644574 /* AppDelegate.swift in Sources */,
+				843E2DDA245C03DE00290312 /* Client+Plugins.swift in Sources */,
+				843A0678245AA96E008E7160 /* LoginController.swift in Sources */,
+				843E2DE0245C477200290312 /* AuthResponse.swift in Sources */,
+				843A0681245AACF8008E7160 /* AppStore.swift in Sources */,
+				846E6904245B0DF7008D97FB /* AuthService.swift in Sources */,
+				84FC9DE0245C8A8200EF61B4 /* UserDefaults.swift in Sources */,
+				846E68F5245AFE9B008D97FB /* AuthState.swift in Sources */,
+				843E2DDD245C072400290312 /* Logger.swift in Sources */,
+				843A067D245AA9A9008E7160 /* ViewModel.swift in Sources */,
+				846E68FB245B02DE008D97FB /* AuthReducer.swift in Sources */,
+				846E68FD245B0481008D97FB /* AuthThunk.swift in Sources */,
+				843E2DE2245C48DF00290312 /* MoyaError.swift in Sources */,
+				843A067F245AAA51008E7160 /* UIController.swift in Sources */,
+				84FC9DE4245C93D700EF61B4 /* Service+Protocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		847805F7245AA63F00644574 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847805F8245AA63F00644574 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		847805FB245AA63F00644574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		847805FC245AA63F00644574 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		847805FE245AA63F00644574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E87E6F7581AA63CECC6CFF87 /* Pods-SwiftReduxApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftReduxApp/App/Lauch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.baveku.SwiftReduxApp;
+				PRODUCT_NAME = SwiftReduxApp;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		847805FF245AA63F00644574 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 477FE3F5D0F807B678996739 /* Pods-SwiftReduxApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftReduxApp/App/Lauch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.baveku.SwiftReduxApp;
+				PRODUCT_NAME = SwiftReduxApp;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		847805E4245AA63E00644574 /* Build configuration list for PBXProject "SwiftReduxApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847805FB245AA63F00644574 /* Debug */,
+				847805FC245AA63F00644574 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847805FD245AA63F00644574 /* Build configuration list for PBXNativeTarget "SwiftReduxApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847805FE245AA63F00644574 /* Debug */,
+				847805FF245AA63F00644574 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 847805E1245AA63E00644574 /* Project object */;
+}
