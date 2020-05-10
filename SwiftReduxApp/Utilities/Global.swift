@@ -1,5 +1,5 @@
 //
-//  UIController.swift
+//  Global.swift
 //  SwiftReduxApp
 //
 //  Created by Bách on 5/10/20.
