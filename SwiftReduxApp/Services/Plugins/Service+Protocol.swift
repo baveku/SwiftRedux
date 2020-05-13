@@ -7,4 +7,4 @@
 //
 
 import Foundation
-protocol NetworkService {}
+protocol INetworkService {}

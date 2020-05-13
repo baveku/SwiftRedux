@@ -7,18 +7,7 @@
 //
 
 import Foundation
-import XCGLogger
 
-let log = XCGLogger.default
-
-func setupLogger() {
-    log.setup(
-        level: .debug,
-        showThreadName: false,
-        showLevel: false,
-        showFileNames: true,
-        showLineNumbers: false,
-        showDate: false,
-        fileLevel: .debug
-    )
+func print(_ message: String) {
+    NSLog(message)
 }

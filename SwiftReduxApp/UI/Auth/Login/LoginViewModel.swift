@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import ReSwift
 
-class LoginViewModel: ViewModel {
+class LoginViewModel: ViewModel<AuthState> {
     
 }

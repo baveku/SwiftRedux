@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct AllProductsResponse: Codable {
-    let products: [String]
+struct LoginResponse: Codable {
+    let token: String
+    let expireTime: String
 }

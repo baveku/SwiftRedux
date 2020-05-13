@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class HomeViewModel: ViewModel<AppState> {
+    override func selector(_ state: AppState) -> AppState {
+        return state
+    }
+    
+    func buttonToggle() {
+        NSLog("HELLO GUY")
+        print("HELLO GUY")
+    }
+}

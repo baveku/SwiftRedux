@@ -11,6 +11,8 @@ import UIKit
 
 private let locator: DIContainer = (UIApplication.shared.delegate as! AppDelegate).locator
 
-func GetService<T: NetworkService>() -> T {
-    return locator.resolve()
+struct APIManager {
+    static func getService<T: INetworkService>() -> T {
+        return locator.resolve()
+    }
 }

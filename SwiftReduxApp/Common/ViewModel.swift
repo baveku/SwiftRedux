@@ -12,14 +12,12 @@ import RxSwift
 import RxRelay
 import ReSwift
 
-private protocol ViewModelLifeCycle {
+protocol ViewModelLifeCycle {
     func didLoad()
-    func didAppear()
-    func didDisappear()
     func release()
 }
 
-private protocol ViewModelProperty: StoreSubscriber {
+protocol ViewModelProperty: StoreSubscriber {
     var disposeBag: DisposeBag? {get set}
     var loading: BehaviorRelay<Bool> {get set}
 }
@@ -30,43 +28,67 @@ extension ViewModelProperty {
     }
 }
 
-class ViewModel: ViewModelProperty {
+typealias ViewModable = ViewModelLifeCycle & ViewModelLifeCycle
+
+/**
+ ViewModel in MVVM-Redux
+ This is handle business logic for UIController
+ 
+ ViewModel auto subcribe to AppStore
+ 
+ # Required
+ You need handle selector to ViewModel know to use children State for Binding to Rx
+ Require Selector
+ ```
+ func selector(_ state: AppState) -> S {
+     // Tramsform from AppState to ViewModel State
+ }
+ ```
+ 
+ # LifeCycle
+ - Didload:
+    - Auto Subcribe AppStore State
+ - Release:
+    - Unsubcribe, release Disposebag
+ 
+ # Parameters:
+ - S: is substate to use generic of ViewModel
+*/
+class ViewModel<S: StateType>: ViewModelProperty {
     var loading: BehaviorRelay<Bool> = .init(value: false)
-    typealias StoreSubscriberStateType = AppState
+    typealias StoreSubscriberStateType = S
     var disposeBag: DisposeBag? = DisposeBag()
 
+    func selector(_ state: AppState) -> S {
+        return state as! S
+    }
+    
     deinit {
         release()
     }
 }
 
 extension ViewModel {
-    func newState(state: AppState) {}
+    func newState(state: S) {}
     
-    func subcribes() {
-        appStore.subscribe(self)
+    private func subcribes() {
+        appStore.subscribe(self) { state in
+            return state.select(self.selector)
+        }
     }
     
-    func unsubcribe() {
+    private func unsubcribe() {
         appStore.unsubscribe(self)
     }
 }
 
 extension ViewModel: ViewModelLifeCycle {
-    func didDisappear() {
-        unsubcribe()
-    }
-    
-    func didAppear() {
+    func didLoad() {
         subcribes()
     }
     
-    func didLoad() {
-           subcribes()
-    }
-    
     func release() {
-       disposeBag = nil
-       unsubcribe()
+        unsubcribe()
+        disposeBag = nil
     }
 }

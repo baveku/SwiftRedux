@@ -8,14 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		5488791B4F32A217DBAE7A60 /* Pods_SwiftReduxApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B9422F6800918D507BF0AA /* Pods_SwiftReduxApp.framework */; };
+		84026F3D2467FE8D00025CCA /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84026F3C2467FE8D00025CCA /* Global.swift */; };
+		84162A0B2466843200AE3181 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84162A0A2466843200AE3181 /* UserModel.swift */; };
+		84162A0D246684F900AE3181 /* Int+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84162A0C246684F900AE3181 /* Int+Utils.swift */; };
+		84162A0F2466902B00AE3181 /* ErrorMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84162A0E2466902B00AE3181 /* ErrorMiddleware.swift */; };
+		84162A122466937100AE3181 /* RootRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84162A112466937100AE3181 /* RootRoutable.swift */; };
+		84162A182466982D00AE3181 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84162A172466982D00AE3181 /* HomeScreen.swift */; };
+		84162A1B2466987700AE3181 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84162A1A2466987700AE3181 /* Icons.swift */; };
+		84162A1D2466D68800AE3181 /* UIImage+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84162A1C2466D68800AE3181 /* UIImage+Util.swift */; };
+		842977622469B598006E439A /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842977612469B598006E439A /* LoginRequest.swift */; };
+		842977652469B611006E439A /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842977642469B611006E439A /* Requestable.swift */; };
 		843A0670245AA7E0008E7160 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A066F245AA7E0008E7160 /* AppState.swift */; };
 		843A0673245AA89E008E7160 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0672245AA89E008E7160 /* AppReducer.swift */; };
 		843A0678245AA96E008E7160 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0677245AA96E008E7160 /* LoginController.swift */; };
 		843A067A245AA977008E7160 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0679245AA977008E7160 /* LoginViewModel.swift */; };
 		843A067D245AA9A9008E7160 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A067C245AA9A9008E7160 /* ViewModel.swift */; };
-		843A067F245AAA51008E7160 /* UIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A067E245AAA51008E7160 /* UIController.swift */; };
 		843A0681245AACF8008E7160 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A0680245AACF8008E7160 /* AppStore.swift */; };
-		843E2DDA245C03DE00290312 /* Client+Plugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DD9245C03DE00290312 /* Client+Plugins.swift */; };
+		843E2DDA245C03DE00290312 /* ClientProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DD9245C03DE00290312 /* ClientProvider.swift */; };
 		843E2DDD245C072400290312 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DDC245C072400290312 /* Logger.swift */; };
 		843E2DE0245C477200290312 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DDF245C477200290312 /* AuthResponse.swift */; };
 		843E2DE2245C48DF00290312 /* MoyaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E2DE1245C48DF00290312 /* MoyaError.swift */; };
@@ -30,6 +39,10 @@
 		847805F1245AA63E00644574 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847805F0245AA63E00644574 /* MainViewController.swift */; };
 		847805F6245AA63F00644574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847805F5245AA63F00644574 /* Assets.xcassets */; };
 		847805F9245AA63F00644574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847805F7245AA63F00644574 /* LaunchScreen.storyboard */; };
+		84FAC1A5246701F900ADD332 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAC1A4246701F900ADD332 /* HomeViewModel.swift */; };
+		84FAC1A72467096D00ADD332 /* HomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FAC1A62467096D00ADD332 /* HomeScreen.xib */; };
+		84FAC1A924670E3A00ADD332 /* NSObject+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAC1A824670E3900ADD332 /* NSObject+Util.swift */; };
+		84FAC1AD2467C19C00ADD332 /* UIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAC1AC2467C19C00ADD332 /* UIController.swift */; };
 		84FC9DDE245C871A00EF61B4 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC9DDD245C871A00EF61B4 /* DependencyInjection.swift */; };
 		84FC9DE0245C8A8200EF61B4 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC9DDF245C8A8200EF61B4 /* UserDefaults.swift */; };
 		84FC9DE2245C92C600EF61B4 /* DependencyInjection+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC9DE1245C92C600EF61B4 /* DependencyInjection+Utils.swift */; };
@@ -38,14 +51,23 @@
 
 /* Begin PBXFileReference section */
 		477FE3F5D0F807B678996739 /* Pods-SwiftReduxApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReduxApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftReduxApp/Pods-SwiftReduxApp.release.xcconfig"; sourceTree = "<group>"; };
+		84026F3C2467FE8D00025CCA /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		84162A0A2466843200AE3181 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		84162A0C246684F900AE3181 /* Int+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Utils.swift"; sourceTree = "<group>"; };
+		84162A0E2466902B00AE3181 /* ErrorMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMiddleware.swift; sourceTree = "<group>"; };
+		84162A112466937100AE3181 /* RootRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoutable.swift; sourceTree = "<group>"; };
+		84162A172466982D00AE3181 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		84162A1A2466987700AE3181 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		84162A1C2466D68800AE3181 /* UIImage+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Util.swift"; sourceTree = "<group>"; };
+		842977612469B598006E439A /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		842977642469B611006E439A /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		843A066F245AA7E0008E7160 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		843A0672245AA89E008E7160 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		843A0677245AA96E008E7160 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		843A0679245AA977008E7160 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		843A067C245AA9A9008E7160 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		843A067E245AAA51008E7160 /* UIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIController.swift; sourceTree = "<group>"; };
 		843A0680245AACF8008E7160 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
-		843E2DD9245C03DE00290312 /* Client+Plugins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client+Plugins.swift"; sourceTree = "<group>"; };
+		843E2DD9245C03DE00290312 /* ClientProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProvider.swift; sourceTree = "<group>"; };
 		843E2DDC245C072400290312 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		843E2DDF245C477200290312 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		843E2DE1245C48DF00290312 /* MoyaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaError.swift; sourceTree = "<group>"; };
@@ -62,6 +84,10 @@
 		847805F5245AA63F00644574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847805F8245AA63F00644574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847805FA245AA63F00644574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FAC1A4246701F900ADD332 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		84FAC1A62467096D00ADD332 /* HomeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreen.xib; sourceTree = "<group>"; };
+		84FAC1A824670E3900ADD332 /* NSObject+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Util.swift"; sourceTree = "<group>"; };
+		84FAC1AC2467C19C00ADD332 /* UIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIController.swift; sourceTree = "<group>"; };
 		84FC9DDD245C871A00EF61B4 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		84FC9DDF245C8A8200EF61B4 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		84FC9DE1245C92C600EF61B4 /* DependencyInjection+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyInjection+Utils.swift"; sourceTree = "<group>"; };
@@ -103,6 +129,79 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		84162A082466841700AE3181 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84162A092466842500AE3181 /* User */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84162A092466842500AE3181 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				84162A0A2466843200AE3181 /* UserModel.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		84162A102466935E00AE3181 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				84162A112466937100AE3181 /* RootRoutable.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		84162A132466962A00AE3181 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				847805F0245AA63E00644574 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		84162A142466980000AE3181 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84162A172466982D00AE3181 /* HomeScreen.swift */,
+				84FAC1A4246701F900ADD332 /* HomeViewModel.swift */,
+				84FAC1A62467096D00ADD332 /* HomeScreen.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		84162A152466980600AE3181 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		84162A192466985D00AE3181 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				84162A1A2466987700AE3181 /* Icons.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		842977602469B57C006E439A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				842977612469B598006E439A /* LoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		842977632469B600006E439A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				842977642469B611006E439A /* Requestable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		843A0669245AA774008E7160 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +224,7 @@
 		843A066B245AA7A2008E7160 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				84162A102466935E00AE3181 /* Router */,
 				843E2DD8245C02EA00290312 /* Middlewares */,
 				843A0674245AA930008E7160 /* Modules */,
 				843A066D245AA7B3008E7160 /* Entity */,
@@ -138,6 +238,9 @@
 		843A066C245AA7A9008E7160 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				84162A152466980600AE3181 /* Products */,
+				84162A142466980000AE3181 /* Home */,
+				84162A132466962A00AE3181 /* Main */,
 				843A0675245AA94F008E7160 /* Auth */,
 			);
 			path = UI;
@@ -179,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				843A067C245AA9A9008E7160 /* ViewModel.swift */,
-				843A067E245AAA51008E7160 /* UIController.swift */,
+				84FAC1AC2467C19C00ADD332 /* UIController.swift */,
 				84FC9DDD245C871A00EF61B4 /* DependencyInjection.swift */,
 				84FC9DDF245C8A8200EF61B4 /* UserDefaults.swift */,
 			);
@@ -189,6 +292,7 @@
 		843E2DD8245C02EA00290312 /* Middlewares */ = {
 			isa = PBXGroup;
 			children = (
+				84162A0E2466902B00AE3181 /* ErrorMiddleware.swift */,
 			);
 			path = Middlewares;
 			sourceTree = "<group>";
@@ -198,6 +302,10 @@
 			children = (
 				84FC9DE1245C92C600EF61B4 /* DependencyInjection+Utils.swift */,
 				843E2DDC245C072400290312 /* Logger.swift */,
+				84162A0C246684F900AE3181 /* Int+Utils.swift */,
+				84162A1C2466D68800AE3181 /* UIImage+Util.swift */,
+				84FAC1A824670E3900ADD332 /* NSObject+Util.swift */,
+				84026F3C2467FE8D00025CCA /* Global.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -225,6 +333,7 @@
 		846E68FE245B09B1008D97FB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				842977632469B600006E439A /* Common */,
 				846E6900245B0A1F008D97FB /* Auth */,
 				846E68FF245B09B8008D97FB /* Plugins */,
 			);
@@ -234,7 +343,7 @@
 		846E68FF245B09B8008D97FB /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				843E2DD9245C03DE00290312 /* Client+Plugins.swift */,
+				843E2DD9245C03DE00290312 /* ClientProvider.swift */,
 				843E2DE1245C48DF00290312 /* MoyaError.swift */,
 				84FC9DE3245C93D700EF61B4 /* Service+Protocol.swift */,
 			);
@@ -244,6 +353,7 @@
 		846E6900245B0A1F008D97FB /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				842977602469B57C006E439A /* Request */,
 				843E2DDE245C475900290312 /* Response */,
 				846E6901245B0A41008D97FB /* AuthAPI.swift */,
 				846E6903245B0DF7008D97FB /* AuthService.swift */,
@@ -272,13 +382,14 @@
 		847805EB245AA63E00644574 /* SwiftReduxApp */ = {
 			isa = PBXGroup;
 			children = (
+				84162A192466985D00AE3181 /* Constants */,
 				843E2DDB245C060C00290312 /* Utilities */,
 				846E68FE245B09B1008D97FB /* Services */,
 				843A067B245AA97D008E7160 /* Common */,
 				843A0669245AA774008E7160 /* App */,
 				843A066C245AA7A9008E7160 /* UI */,
+				84162A082466841700AE3181 /* Models */,
 				843A066B245AA7A2008E7160 /* Core */,
-				847805F0245AA63E00644574 /* MainViewController.swift */,
 			);
 			path = SwiftReduxApp;
 			sourceTree = "<group>";
@@ -343,6 +454,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FAC1A72467096D00ADD332 /* HomeScreen.xib in Resources */,
 				847805F9245AA63F00644574 /* LaunchScreen.storyboard in Resources */,
 				847805F6245AA63F00644574 /* Assets.xcassets in Resources */,
 			);
@@ -400,26 +512,38 @@
 				84FC9DE2245C92C600EF61B4 /* DependencyInjection+Utils.swift in Sources */,
 				846E68F9245AFF66008D97FB /* AuthPayload.swift in Sources */,
 				846E6902245B0A41008D97FB /* AuthAPI.swift in Sources */,
+				84FAC1A5246701F900ADD332 /* HomeViewModel.swift in Sources */,
+				84FAC1A924670E3A00ADD332 /* NSObject+Util.swift in Sources */,
 				843A0670245AA7E0008E7160 /* AppState.swift in Sources */,
 				847805F1245AA63E00644574 /* MainViewController.swift in Sources */,
 				843A067A245AA977008E7160 /* LoginViewModel.swift in Sources */,
 				84FC9DDE245C871A00EF61B4 /* DependencyInjection.swift in Sources */,
 				846E68F7245AFEE8008D97FB /* AuthAction.swift in Sources */,
+				84162A1D2466D68800AE3181 /* UIImage+Util.swift in Sources */,
+				84162A0B2466843200AE3181 /* UserModel.swift in Sources */,
+				84162A182466982D00AE3181 /* HomeScreen.swift in Sources */,
+				84FAC1AD2467C19C00ADD332 /* UIController.swift in Sources */,
 				843A0673245AA89E008E7160 /* AppReducer.swift in Sources */,
 				847805ED245AA63E00644574 /* AppDelegate.swift in Sources */,
-				843E2DDA245C03DE00290312 /* Client+Plugins.swift in Sources */,
+				84026F3D2467FE8D00025CCA /* Global.swift in Sources */,
+				843E2DDA245C03DE00290312 /* ClientProvider.swift in Sources */,
 				843A0678245AA96E008E7160 /* LoginController.swift in Sources */,
+				84162A0D246684F900AE3181 /* Int+Utils.swift in Sources */,
 				843E2DE0245C477200290312 /* AuthResponse.swift in Sources */,
+				842977652469B611006E439A /* Requestable.swift in Sources */,
 				843A0681245AACF8008E7160 /* AppStore.swift in Sources */,
 				846E6904245B0DF7008D97FB /* AuthService.swift in Sources */,
 				84FC9DE0245C8A8200EF61B4 /* UserDefaults.swift in Sources */,
+				84162A1B2466987700AE3181 /* Icons.swift in Sources */,
 				846E68F5245AFE9B008D97FB /* AuthState.swift in Sources */,
 				843E2DDD245C072400290312 /* Logger.swift in Sources */,
 				843A067D245AA9A9008E7160 /* ViewModel.swift in Sources */,
+				84162A0F2466902B00AE3181 /* ErrorMiddleware.swift in Sources */,
 				846E68FB245B02DE008D97FB /* AuthReducer.swift in Sources */,
+				84162A122466937100AE3181 /* RootRoutable.swift in Sources */,
 				846E68FD245B0481008D97FB /* AuthThunk.swift in Sources */,
 				843E2DE2245C48DF00290312 /* MoyaError.swift in Sources */,
-				843A067F245AAA51008E7160 /* UIController.swift in Sources */,
+				842977622469B598006E439A /* LoginRequest.swift in Sources */,
 				84FC9DE4245C93D700EF61B4 /* Service+Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +616,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -563,6 +688,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.baveku.SwiftReduxApp;
 				PRODUCT_NAME = SwiftReduxApp;
 				SWIFT_VERSION = 5.0;
@@ -580,6 +709,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.baveku.SwiftReduxApp;
 				PRODUCT_NAME = SwiftReduxApp;

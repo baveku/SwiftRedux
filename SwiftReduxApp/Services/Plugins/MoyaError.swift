@@ -10,4 +10,6 @@ import Foundation
 
 enum RequestError: Error {
     case tokenNotFound
+    case tokenInvalid
+    case tokenExpire
 }

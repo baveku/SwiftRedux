@@ -7,3 +7,12 @@
 //
 
 import Foundation
+extension NSObject {
+    static var className: String {
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+
+    var stringFromInstance: String {
+        return NSStringFromClass(type(of: self)).components(separatedBy: ".").last!
+    }
+}

@@ -22,7 +22,7 @@ struct NetworkPlugins {
     }
 }
 
-class KMartProvider<T: TargetType>: MoyaProvider<T> {
+class APIProvider<T: TargetType>: MoyaProvider<T> {
     override init(endpointClosure: @escaping MoyaProvider<T>.EndpointClosure = MoyaProvider.defaultEndpointMapping, requestClosure: @escaping MoyaProvider<T>.RequestClosure = MoyaProvider<T>.defaultRequestMapping, stubClosure: @escaping MoyaProvider<T>.StubClosure = MoyaProvider.neverStub, callbackQueue: DispatchQueue? = nil, session: Session = MoyaProvider<Target>.defaultAlamofireSession(), plugins: [PluginType] = [], trackInflights: Bool = false) {
         let embeddedPlugins = embeededPlugins(plugins)
         super.init(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, callbackQueue: callbackQueue, session: session, plugins: embeddedPlugins, trackInflights: trackInflights)
@@ -33,7 +33,7 @@ class KMartProvider<T: TargetType>: MoyaProvider<T> {
     /// - Parameters:
     ///   - token: Entity, which provides specifications necessary for a `MoyaProvider`.
     ///   - callbackQueue: Callback queue. If nil - queue from provider initializer will be used.
-    /// - Returns: Single response object.
+    /// - Returns: Promise response object.
     func request<T: Codable>(_ token: Target, callbackQueue: DispatchQueue? = nil) -> Promise<T> {
         return Promise<T> { fulfill, reject in
             self.request(

@@ -27,7 +27,6 @@ import ReSwiftThunk
 //        }}}
 //    }
 //}
-
 let thunkMiddleware: Middleware<AppState> = createThunkMiddleware()
 let appStore = Store<AppState>(reducer: appReducer, state: AppState(), middleware: [thunkMiddleware])
 

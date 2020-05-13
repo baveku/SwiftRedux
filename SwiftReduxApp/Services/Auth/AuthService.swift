@@ -10,10 +10,14 @@ import Foundation
 import Moya
 import Promises
 
-class AuthService: NetworkService {
-    private let provider = KMartProvider<AuthAPI>()
+class AuthService: INetworkService {
+    private let provider = APIProvider<AuthAPI>()
     
-    func allProducts() -> Promise<AllProductsResponse> {
-        return self.provider.request(.signup)
+    func login(email: String, password: String) -> Promise<LoginResponse> {
+        return self.provider.request(.login(.init(email: email, password: password)))
+    }
+    
+    func weather() -> Promise<LoginResponse> {
+        return self.provider.request(.weather)
     }
 }

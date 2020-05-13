@@ -9,27 +9,17 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UITabBarController {
+class MainTabbar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        
-        let button = UIButton()
-        self.view.addSubview(button)
-        button.snp.makeConstraints { (maker) in
-            maker.centerX.equalToSuperview()
-            maker.centerY.equalToSuperview()
-            maker.width.equalTo(60)
-            maker.height.equalTo(20)
-        }
-        button.setTitle("Button", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.tintColor = .blue
-        button.addTarget(self, action: #selector(printLog), for: .touchUpInside)
+        self.edgesForExtendedLayout = []
+        setupChildControllers()
     }
     
-    @objc func printLog() {
-        log.debug("HEELoo")
+    func setupChildControllers() {
+        let homeViewModel = HomeViewModel()
+        let home = HomeScreen(viewModel: homeViewModel, useInterfaceBuilder: true)
+        viewControllers = [home]
     }
 }
 

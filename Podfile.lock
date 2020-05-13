@@ -1,5 +1,62 @@
 PODS:
   - Alamofire (5.1.0)
+  - boost-for-react-native (1.63.0)
+  - CocoaAsyncSocket (7.6.4)
+  - CocoaLibEvent (1.0.0)
+  - ComponentKit (0.30):
+    - RenderCore (= 0.30)
+    - Yoga (~> 1.14)
+  - Flipper (0.42.0):
+    - Flipper-Folly (~> 2.2)
+    - Flipper-RSocket (~> 1.1)
+  - Flipper-DoubleConversion (1.1.7)
+  - Flipper-Folly (2.2.0):
+    - boost-for-react-native
+    - CocoaLibEvent (~> 1.0)
+    - Flipper-DoubleConversion
+    - Flipper-Glog
+    - OpenSSL-Universal (= 1.0.2.19)
+  - Flipper-Glog (0.3.6)
+  - Flipper-PeerTalk (0.0.4)
+  - Flipper-RSocket (1.1.0):
+    - Flipper-Folly (~> 2.2)
+  - FlipperKit (0.42.0):
+    - FlipperKit/Core (= 0.42.0)
+  - FlipperKit/Core (0.42.0):
+    - Flipper (~> 0.42.0)
+    - FlipperKit/CppBridge
+    - FlipperKit/FBCxxFollyDynamicConvert
+    - FlipperKit/FBDefines
+    - FlipperKit/FKPortForwarding
+  - FlipperKit/CppBridge (0.42.0):
+    - Flipper (~> 0.42.0)
+  - FlipperKit/FBCxxFollyDynamicConvert (0.42.0):
+    - Flipper-Folly (~> 2.2)
+  - FlipperKit/FBDefines (0.42.0)
+  - FlipperKit/FKPortForwarding (0.42.0):
+    - CocoaAsyncSocket (~> 7.6)
+    - Flipper-PeerTalk (~> 0.0.4)
+  - FlipperKit/FlipperKitHighlightOverlay (0.42.0)
+  - FlipperKit/FlipperKitLayoutComponentKitSupport (0.42.0):
+    - ComponentKit (~> 0.30)
+    - FlipperKit/Core
+    - FlipperKit/FlipperKitHighlightOverlay
+    - FlipperKit/FlipperKitLayoutPlugin
+    - FlipperKit/FlipperKitLayoutTextSearchable
+    - RenderCore (~> 0.30)
+  - FlipperKit/FlipperKitLayoutPlugin (0.42.0):
+    - FlipperKit/Core
+    - FlipperKit/FlipperKitHighlightOverlay
+    - FlipperKit/FlipperKitLayoutTextSearchable
+    - YogaKit (~> 1.18)
+  - FlipperKit/FlipperKitLayoutTextSearchable (0.42.0)
+  - FlipperKit/FlipperKitNetworkPlugin (0.42.0):
+    - FlipperKit/Core
+  - FlipperKit/FlipperKitUserDefaultsPlugin (0.42.0):
+    - FlipperKit/Core
+  - FlipperKit/SKIOSNetworkPlugin (0.42.0):
+    - FlipperKit/Core
+    - FlipperKit/FlipperKitNetworkPlugin
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
@@ -7,12 +64,13 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - ObjcExceptionBridging (1.0.1):
-    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
-  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - OpenSSL-Universal (1.0.2.19):
+    - OpenSSL-Universal/Static (= 1.0.2.19)
+  - OpenSSL-Universal/Static (1.0.2.19)
   - PromisesObjC (1.2.8)
   - PromisesSwift (1.2.8):
     - PromisesObjC (= 1.2.8)
+  - RenderCore (0.30)
   - ReSwift (5.0.0)
   - ReSwiftRouter (0.7.1):
     - ReSwift (~> 5.0.0)
@@ -28,14 +86,24 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SnapKit (5.0.1)
-  - XCGLogger (7.0.1):
-    - XCGLogger/Core (= 7.0.1)
-  - XCGLogger/Core (7.0.1):
-    - ObjcExceptionBridging
+  - Yoga (1.14.0)
+  - YogaKit (1.18.1):
+    - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - CocoaAsyncSocket
+  - CocoaLibEvent
+  - Flipper-DoubleConversion
+  - Flipper-Folly
+  - Flipper-Glog
+  - Flipper-PeerTalk
+  - FlipperKit (~> 0.42.0)
+  - FlipperKit/FlipperKitLayoutComponentKitSupport (~> 0.42.0)
+  - FlipperKit/FlipperKitUserDefaultsPlugin (~> 0.42.0)
+  - FlipperKit/SKIOSNetworkPlugin (~> 0.42.0)
   - IGListKit (~> 4.0.0)
   - Moya (~> 14.0.0)
+  - OpenSSL-Universal
   - PromisesSwift
   - ReSwift (~> 5.0.0)
   - ReSwiftRouter (~> 0.7.1)
@@ -43,17 +111,28 @@ DEPENDENCIES:
   - RxCocoa (~> 5.1.1)
   - RxSwift (~> 5.1.1)
   - SnapKit (~> 5.0.1)
-  - XCGLogger (~> 7.0.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - boost-for-react-native
+    - CocoaAsyncSocket
+    - CocoaLibEvent
+    - ComponentKit
+    - Flipper
+    - Flipper-DoubleConversion
+    - Flipper-Folly
+    - Flipper-Glog
+    - Flipper-PeerTalk
+    - Flipper-RSocket
+    - FlipperKit
     - IGListDiffKit
     - IGListKit
     - Moya
-    - ObjcExceptionBridging
+    - OpenSSL-Universal
     - PromisesObjC
     - PromisesSwift
+    - RenderCore
     - ReSwift
     - ReSwiftRouter
     - ReSwiftThunk
@@ -61,16 +140,29 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
-    - XCGLogger
+    - Yoga
+    - YogaKit
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
+  ComponentKit: c34da1ab3515cf18db68a4ba22c6599568d1de74
+  Flipper: 16f4f0614fa9935e67bdd46ace0909677df1b200
+  Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
+  Flipper-Folly: c12092ea368353b58e992843a990a3225d4533c3
+  Flipper-Glog: 1dfd6abf1e922806c52ceb8701a3599a79a200a6
+  Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
+  Flipper-RSocket: 64e7431a55835eb953b0bf984ef3b90ae9fdddd7
+  FlipperKit: a53f8c1495e283dd8a1aeac9f3faaa63a03da17c
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   PromisesSwift: 37bad6f4daddb02f7c9c531efe91e8b21c13ee2f
+  RenderCore: d779c47622b313ce2d51bb36d084517af38b0dc1
   ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
   ReSwiftRouter: 916d8f940dbecc1d32dc1912b8f1891c7bcc7836
   ReSwiftThunk: 23c8ea9092d9dc94b72005f19352dbd37fa42533
@@ -78,8 +170,9 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  XCGLogger: 1943831ef907df55108b0b18657953f868de973b
+  Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
+  YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: ac8dc7f175fccc8befc2796a321560fbfb3d7a21
+PODFILE CHECKSUM: bb776a845e8f469082f19ba691e8918a6408f1b3
 
 COCOAPODS: 1.9.1

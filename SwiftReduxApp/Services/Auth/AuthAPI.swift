@@ -8,14 +8,16 @@
 
 import Foundation
 import Moya
+//https://samples.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&appid=439d4b804bc8187953eb36d2a8c26a02
 
 enum AuthAPI {
-    case login(email: String, password: String)
+    case login(LoginRequest)
     case signup
+    case weather
 }
 extension AuthAPI: APITargetType {
     var baseURL: URL {
-        return URL(string: "https://kmart.vn")!
+        return URL(string: "https://samples.openweathermap.org")!
     }
     
     var path: String {
@@ -23,7 +25,7 @@ extension AuthAPI: APITargetType {
         case .login:
             return "/login"
         default:
-            return ""
+            return "/data/2.5/box/city"
         }
     }
     
@@ -31,6 +33,8 @@ extension AuthAPI: APITargetType {
         switch self {
         case .login, .signup:
             return .post
+        case .weather:
+            return .get
         }
     }
     
@@ -40,11 +44,14 @@ extension AuthAPI: APITargetType {
     
     var task: Task {
         switch self {
-        case .login(let email, let password):
-            let params = ["email": email, "password": password]
-            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .login(let request):
+            return .requestParameters(parameters: request.parameters, encoding: JSONEncoding.default)
         case .signup:
             return .requestParameters(parameters: [:], encoding: JSONEncoding.default)
+        case .weather:
+            //bbox=12,32,15,37,10&appid=439d4b804bc8187953eb36d2a8c26a02
+            let params = ["bbox": "12,32,15,37,10", "appid": "439d4b804bc8187953eb36d2a8c26a02"]
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
     }
 }

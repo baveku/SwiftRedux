@@ -7,3 +7,8 @@
 //
 
 import Foundation
+struct UserModel {
+    let displayName: String
+    let avatarPath: String
+    let birthdayTime: UInt64
+}

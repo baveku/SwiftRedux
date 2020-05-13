@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import ReSwift
+import ReSwiftThunk
+import ReSwiftRouter
+
+struct ErrorThunk {
+    static func handleError(_ error: Error) -> Thunk<AppState> {
+        return Thunk<AppState> { dispatch, getState in
+            switch error {
+            case RequestError.tokenExpire:
+                break
+            default:
+                break
+            }
+        }
+    }
+}
